@@ -14,11 +14,11 @@ export default function LetterScreen() {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -50 }}
       transition={{ duration: 1 }}
-      className="w-full h-full bg-[#fdfbf7] text-zinc-900 flex overflow-y-auto md:overflow-hidden"
+      className="w-full h-full bg-[#fdfbf7] text-zinc-900 overflow-y-auto custom-scrollbar md:overflow-hidden"
     >
       <div className="flex flex-col md:flex-row w-full min-h-full md:h-full max-w-7xl mx-auto">
         {/* Left Side: Letter */}
-        <div className="flex-1 p-8 md:p-16 md:overflow-y-auto flex flex-col justify-center min-h-[50vh]">
+        <div className="flex-1 p-8 pb-32 md:p-16 md:overflow-y-auto flex flex-col justify-center h-full">
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
