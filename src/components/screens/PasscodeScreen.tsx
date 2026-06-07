@@ -43,9 +43,10 @@ export default function PasscodeScreen() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="flex flex-col md:flex-row items-center justify-center min-h-screen w-full bg-gradient-to-br from-[#4a0000] via-[#8B0000] to-black p-4 md:p-8 overflow-y-auto"
+      className="w-full h-full bg-gradient-to-br from-[#4a0000] via-[#8B0000] to-black overflow-y-auto"
     >
-      <div className="flex flex-col items-center justify-center gap-8 w-full max-w-md">
+      <div className="flex flex-col md:flex-row items-center justify-center min-h-full w-full p-4 md:p-8 gap-8 md:gap-12">
+        <div className="flex flex-col items-center justify-center gap-8 w-full max-w-md pt-8 md:pt-0">
         <motion.div 
           initial={{ rotate: -5, scale: 0.9 }}
           animate={{ rotate: [-5, 0, -2, 0], scale: 1 }}
@@ -110,6 +111,7 @@ export default function PasscodeScreen() {
             </button>
           </div>
         </motion.div>
+      </div>
       </div>
     </motion.div>
   );

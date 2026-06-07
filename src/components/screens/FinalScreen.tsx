@@ -61,13 +61,14 @@ export default function FinalScreen() {
     <motion.div 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="w-full h-full relative overflow-hidden flex items-center justify-center bg-black text-white"
+      className="w-full h-full relative overflow-hidden bg-black text-white"
     >
       <div className="absolute inset-0 z-0 pointer-events-none">
         <FinalBackground />
       </div>
 
-      <div className="z-10 w-full max-w-4xl px-4 flex flex-col items-center">
+      <div className="relative z-10 w-full h-full overflow-y-auto custom-scrollbar flex items-center justify-center">
+        <div className="w-full max-w-4xl px-4 py-12 flex flex-col items-center min-h-full justify-center">
         <motion.div
           animate={accepted ? { scale: [1, 1.2, 1], rotate: [0, 10, -10, 0] } : { scale: [1, 1.1, 1] }}
           transition={{ duration: accepted ? 0.5 : 2, repeat: accepted ? 5 : Infinity }}
@@ -156,6 +157,7 @@ export default function FinalScreen() {
             </motion.div>
           )}
         </AnimatePresence>
+        </div>
       </div>
     </motion.div>
   );

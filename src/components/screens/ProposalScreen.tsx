@@ -53,13 +53,14 @@ export default function ProposalScreen() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1.5 }}
-      className="w-full h-full relative overflow-hidden flex items-center justify-center"
+      className="w-full h-full relative overflow-hidden bg-black"
     >
       <div className="absolute inset-0 z-0 pointer-events-none">
         <NightSky />
       </div>
       
-      <div className="z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center justify-center h-full w-full">
+      <div className="relative z-10 w-full h-full overflow-y-auto custom-scrollbar flex items-center justify-center">
+        <div className="text-center px-4 py-12 max-w-4xl mx-auto flex flex-col items-center min-h-full justify-center w-full">
         <AnimatePresence mode="wait">
           {step === 0 && (
             <motion.h1
@@ -129,6 +130,7 @@ export default function ProposalScreen() {
             </motion.div>
           )}
         </AnimatePresence>
+        </div>
       </div>
     </motion.div>
   );
