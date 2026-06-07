@@ -16,7 +16,7 @@ export default function LetterScreen() {
       transition={{ duration: 1 }}
       className="w-full h-full bg-[#fdfbf7] text-zinc-900 flex overflow-y-auto md:overflow-hidden"
     >
-      <div className="flex flex-col md:flex-row w-full h-full max-w-7xl mx-auto">
+      <div className="flex flex-col md:flex-row w-full min-h-full md:h-full max-w-7xl mx-auto">
         {/* Left Side: Letter */}
         <div className="flex-1 p-8 md:p-16 md:overflow-y-auto flex flex-col justify-center min-h-[50vh]">
           <motion.div 
@@ -42,7 +42,7 @@ export default function LetterScreen() {
         </div>
 
         {/* Right Side: Photo Gallery (Polaroid style) */}
-        <div className="flex md:flex-1 relative bg-zinc-800 items-center justify-center overflow-hidden min-h-[50vh] md:min-h-0">
+        <div className="flex md:flex-1 relative bg-zinc-800 items-center justify-center overflow-hidden min-h-[80vh] md:min-h-0">
           <motion.div
             initial={{ rotate: -5, x: 50, opacity: 0 }}
             animate={{ rotate: -5, x: 0, opacity: 1 }}
